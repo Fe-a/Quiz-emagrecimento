@@ -1,5 +1,6 @@
 const questao = document.querySelector('#h1-questao');
 const divQuestao = document.querySelector('#questao')
+const h1MainQuiz = document.querySelector('#h1MainQuiz');
 const btnYellow = document.querySelector('#btn-sim');
 const btnRed = document.querySelector('#btn-nao');
 const spanQuestao = document.querySelector('span');
@@ -67,7 +68,8 @@ const btnAmareloClicado = btnYellow.addEventListener("click", ()=>{
             textoPFaseCinco()
             botaoFaseCinco()
             ul.style.display = 'flex';
-
+            
+            h1MainQuiz.innerHTML = 'Parabéns! Baseado nas suas respostas você está qualificada.';
             console.log("Agora o Texto tem a questão 5");
         }
         console.log(click)
@@ -98,6 +100,10 @@ const btnVermelhoClicado =btnRed.addEventListener("click", ()=>{
             textoPFaseCinco()
             botaoFaseCinco()
             ul.style.display = 'flex';
+            
+            
+            h1MainQuiz.innerHTML = 'Parabéns! Baseado nas suas respostas você está qualificada.';
+        
 
             console.log("Agora o Texto tem a questão 5");
         }
