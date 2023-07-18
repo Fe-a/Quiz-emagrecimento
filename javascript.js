@@ -69,6 +69,11 @@ const btnAmareloClicado = btnYellow.addEventListener("click", () => {
             botaoFaseCinco()
             ul.style.display = 'flex';
 
+            const imgFaseCinco = document.querySelector('#img-fasecinco');
+            const imgPrincipal = document.querySelector('#img-emagrecimento');
+            imgPrincipal.remove();
+            imgFaseCinco.style.display = 'block';
+
             h1MainQuiz.innerHTML = 'Parabéns! Baseado nas suas respostas você está qualificada.';
             console.log("Agora o Texto tem a questão 5");
         }
