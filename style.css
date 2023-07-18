@@ -4,35 +4,37 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root{
-    --corbtn1:rgb(230, 161, 13);
-    --corbtn2:rgb(223, 18, 18);
+:root {
+    --corbtn1: rgb(230, 161, 13);
+    --corbtn2: rgb(223, 18, 18);
 }
 
-#main-quiz{
+#main-quiz {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-#main-quiz-text{
+#main-quiz-text {
     display: flex;
     flex-direction: column;
     width: 80%;
 }
 
-section{
-    background-color: #dfdfdf; /* */
+section {
+    background-color: #dfdfdf;
+    /* */
     width: 90%;
     margin: 25px auto;
     border-radius: 20px;
 }
 
-#main-quiz-text h1{
+#main-quiz-text h1 {
     color: rgb(12, 126, 12);
     font-size: 16pt;
 }
-#main-quiz-text p{
+
+#main-quiz-text p {
     color: #2d2d2d;
     margin: 10px 0;
     text-align: start;
@@ -42,30 +44,38 @@ section{
 #questao {
     padding: 10px;
     background-color: rgb(12, 126, 12);
-    border-radius: 0px  0px 20px 20px;
+    border-radius: 0px 0px 20px 20px;
 
 }
 
-#questao h1, p{
+#questao h1,
+p {
     color: #fff;
     text-align: center;
 }
 
-#questao h1{
+#questao h1 {
     font-size: 18pt;
 }
 
-#questao p{
+#questao p {
     margin: 12px 0;
     font-size: 12pt;
 }
 
-#img-emagrecimento{
+#img-emagrecimento {
     padding: 10px;
     border-radius: 20px;
 }
 
-.btn{
+#img-fasecinco {
+    display: none;
+    width: 320px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.btn {
     width: 100px;
     height: 40px;
     border-radius: 10px;
@@ -80,37 +90,37 @@ section{
 
 
 
-#btn-sim{
+#btn-sim {
     background-color: var(--corbtn1);
-    
+
 }
 
 #btn-sim:hover {
     background-color: rgb(199, 140, 12);
 }
 
-#btn-nao{
+#btn-nao {
     background-color: var(--corbtn2);
 }
 
-#btn-nao:hover{
+#btn-nao:hover {
     background-color: rgb(194, 16, 16);
 }
 
-.align-btn{
+.align-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-ul{
+ul {
     display: none;
     flex-direction: column;
     list-style: none;
-    
+
 }
 
-ul li{
+ul li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -121,10 +131,10 @@ ul li{
     font-weight: 500;
     text-align: justify;
     color: #fff;
-    
+
 }
 
-.icon{
+.icon {
     margin-right: 8px;
     max-width: 20px;
     height: auto;
@@ -149,28 +159,29 @@ ul li{
 
 /* RESPONSIVO */
 @media screen and (max-width: 514px) {
-    section{
+    section {
         width: 90%;
-        
-    }
-    section #main-quiz{
-        display: flex;
-        flex-direction: column;
-       
+
     }
 
-    section #main-quiz #main-quiz-text h1{
+    section #main-quiz {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    section #main-quiz #main-quiz-text h1 {
         font-size: 17pt;
         margin-top: 5px;
         text-align: center;
     }
 
-    section #main-quiz #main-quiz-text p{
+    section #main-quiz #main-quiz-text p {
         width: 100%;
         font-size: 12pt;
         font-weight: 500;
         text-align: center;
         line-height: 18pt;
-        
+
     }
 }

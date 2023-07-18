@@ -13,7 +13,7 @@ const questaoTres = "Você gostaria de aprender um método que promete perder os
 const questaoQuatro = "O vídeo de apresentação a seguir tem um limite de mulheres que podem assistir ao mesmo tempo. Você pretende assistir até o final?";
 
 
-const textoPFaseCinco = () =>{
+const textoPFaseCinco = () => {
     const p = document.createElement('p');
     p.innerHTML = 'Se você concordar com todos termos acima, clique no botão "Eu Concordo" para poder assitir a esta apresentação privada.';
     p.style.fontSize = '10pt';
@@ -31,79 +31,83 @@ const botaoFaseCinco = () => {
 
 }
 
-const textosFaseCinco = () =>{
+const textosFaseCinco = () => {
     console.log("chegamos até aqui")
     textoQuestao.remove(); // remove o texto da questão
-    
-    
+
+
     questao.innerHTML = 'Parabéns!, antes que você assista a apresentação onde é compartilhado o método " 3s " do especialista Michael Fiori, nós simplismente pedimos que cada pessoa aceite nossos 3 termos de uso.';
     questao.style.fontSize = '10pt';
     questao.style.color = 'black';
     questao.style.textAlign = 'center';
     btnRed.remove();
     btnYellow.remove();
-    
+
 }
 
 
 
 let click = 1;
-const btnAmareloClicado = btnYellow.addEventListener("click", ()=>{
+const btnAmareloClicado = btnYellow.addEventListener("click", () => {
     //questao.innerHTML = "Questão 2:"
-    if (click <= 4){
+    if (click <= 4) {
         const numeroQuestao = +spanQuestao.innerHTML;
-        spanQuestao.innerHTML = numeroQuestao + 1;  
+        spanQuestao.innerHTML = numeroQuestao + 1;
         click += 1
-        if(click == 2){
-            textoQuestao.innerHTML = questaoDois; 
+        if (click == 2) {
+            textoQuestao.innerHTML = questaoDois;
             console.log("Agora o Texto tem a questão 2");
-        }if(click == 3){
-            textoQuestao.innerHTML = questaoTres; 
+        } if (click == 3) {
+            textoQuestao.innerHTML = questaoTres;
             console.log("Agora o Texto tem a questão 3");
-        }if(click == 4){
+        } if (click == 4) {
             textoQuestao.innerHTML = questaoQuatro;
             console.log("Agora o Texto tem a questão 4");
-        }if(click == 5){
+        } if (click == 5) {
             textosFaseCinco()
             textoPFaseCinco()
             botaoFaseCinco()
             ul.style.display = 'flex';
-            
+
             h1MainQuiz.innerHTML = 'Parabéns! Baseado nas suas respostas você está qualificada.';
             console.log("Agora o Texto tem a questão 5");
         }
         console.log(click)
     }
     //textos()
-    
+
     console.log("botão amarelo: clicado")
 
 })
-const btnVermelhoClicado =btnRed.addEventListener("click", ()=>{
+const btnVermelhoClicado = btnRed.addEventListener("click", () => {
     //questao.style.color = "blue";
     //questao.innerHTML = "Questão 2:"
-    if (click <= 4){
+    if (click <= 4) {
         const numeroQuestao = +spanQuestao.innerHTML;
-        spanQuestao.innerHTML = numeroQuestao + 1;  
+        spanQuestao.innerHTML = numeroQuestao + 1;
         click += 1
-        if(click == 2){
-            textoQuestao.innerHTML = questaoDois; 
+        if (click == 2) {
+            textoQuestao.innerHTML = questaoDois;
             console.log("Agora o Texto tem a questão 2");
-        }if(click == 3){
-            textoQuestao.innerHTML = questaoTres; 
+        } if (click == 3) {
+            textoQuestao.innerHTML = questaoTres;
             console.log("Agora o Texto tem a questão 3");
-        }if(click == 4){
+        } if (click == 4) {
             textoQuestao.innerHTML = questaoQuatro;
             console.log("Agora o Texto tem a questão 4");
-        }if(click == 5){
+        } if (click == 5) {
             textosFaseCinco()
             textoPFaseCinco()
             botaoFaseCinco()
             ul.style.display = 'flex';
-            
-            
+            const imgFaseCinco = document.querySelector('#img-fasecinco');
+            const imgPrincipal = document.querySelector('#img-emagrecimento');
+            imgPrincipal.remove();
+            imgFaseCinco.style.display = 'block';
+
+
             h1MainQuiz.innerHTML = 'Parabéns! Baseado nas suas respostas você está qualificada.';
-        
+
 
             console.log("Agora o Texto tem a questão 5");
         }
@@ -113,7 +117,7 @@ const btnVermelhoClicado =btnRed.addEventListener("click", ()=>{
 
 })
 
-window.onload = () =>{
+window.onload = () => {
     btnAmareloClicado
     btnVermelhoClicado
     console.log("Deu bom!")
